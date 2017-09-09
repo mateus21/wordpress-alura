@@ -1,4 +1,7 @@
-<?php get_header() ?>
+<?php
+$css_escolhido = 'single';
+include_once ('header.php');
+?>
 
 <main>
     <article>

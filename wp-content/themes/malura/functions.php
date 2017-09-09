@@ -32,3 +32,16 @@ function cadastrandoPostTypeImoveis () {
 }
 
 add_action('init', 'cadastrandoPostTypeImoveis');
+
+function registrar_menu_navegacao() {
+    register_nav_menu('header-menu', 'main_menu');
+}
+
+add_action('init', 'registrar_menu_navegacao');
+
+
+function geraTitle() {
+    bloginfo ('name');
+    if( !is_home() ) echo ' | ';
+    the_title();
+}
