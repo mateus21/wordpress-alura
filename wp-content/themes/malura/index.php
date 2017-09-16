@@ -21,8 +21,12 @@ include_once ('header.php');
                         <option value="">Todos</option>
                         <?php
                         foreach ($taxonomias as $taxonomia) {
+                            $selected = '';
+                            if ($taxonomia->slug == $_GET['taxonomy']) {
+                                $selected = 'selected';
+                            }
                             ?>
-                            <option value="<?= $taxonomia->slug ?>"><?= $taxonomia->name ?></option>
+                            <option value="<?= $taxonomia->slug ?>" <?= $selected ?>><?= $taxonomia->name ?></option>
                             <?php
                         }
                         ?>
